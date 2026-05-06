@@ -1,0 +1,71 @@
+[
+    {
+        "id": "480f658b-8b7c-473f-97a2-324a4278dc48",
+        "question": "Które z wymienionych to języki programowania? (Zaznacz wszystkie poprawne)",
+        "options": [
+            {
+                "content": "HTML",
+                "isCorrect": false
+            },
+            {
+                "content": "Python",
+                "isCorrect": true
+            },
+            {
+                "content": "JavaScript",
+                "isCorrect": true
+            },
+            {
+                "content": "CSS",
+                "isCorrect": false
+            }
+        ],
+        "image": ""
+    },
+    {
+        "id": "19bbf9d1-f7fc-46ac-826b-ad7bee0f5f74",
+        "question": "Które wartości należą do typów prostych (primitives) w JavaScript?",
+        "options": [
+            {
+                "content": "String",
+                "isCorrect": true
+            },
+            {
+                "content": "Boolean",
+                "isCorrect": true
+            },
+            {
+                "content": "Array (Tablica)",
+                "isCorrect": false
+            },
+            {
+                "content": "Object (Obiekt)",
+                "isCorrect": false
+            }
+        ],
+        "image": ""
+    },
+    {
+        "id": "85284dcb-710a-4ebb-be19-522825cd2050",
+        "question": "Zaznacz poprawne deklaracje zmiennych w JavaScript:",
+        "options": [
+            {
+                "content": "let zmienna = 1;",
+                "isCorrect": true
+            },
+            {
+                "content": "const zmienna = 2;",
+                "isCorrect": true
+            },
+            {
+                "content": "variable zmienna = 3;",
+                "isCorrect": false
+            },
+            {
+                "content": "var zmienna = 4;",
+                "isCorrect": true
+            }
+        ],
+        "image": ""
+    }
+]

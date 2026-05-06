@@ -3,14 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikacja Quizowa</title>
+    <title>Platforma Quizowa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div id="quiz-card" class="card">
+        
+        <!-- EKRAN WYBORU KATEGORII -->
+        <div id="categories-card" class="card">
             <div class="header">
-                <h1>Quiz Wiedzy</h1>
+                <h1>Wybierz kategorię testu</h1>
+            </div>
+            
+            <div class="settings-container">
+                <label for="question-count">Ilość pytań do wylosowania:</label>
+                <select id="question-count" class="custom-select">
+                    <option value="all">Wszystkie dostępne</option>
+                    <option value="2">2</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+
+            <div id="categories-list" class="categories-grid">
+                <!-- Kategorie z JS -->
+            </div>
+        </div>
+
+        <!-- EKRAN QUIZU -->
+        <div id="quiz-card" class="card hidden">
+            <div class="header">
+                <h1 id="quiz-title">Quiz</h1>
                 <div id="progress">Pytanie 1 z ...</div>
             </div>
             
@@ -28,14 +53,18 @@
             </div>
         </div>
 
+        <!-- EKRAN WYNIKÓW -->
         <div id="result-card" class="card hidden">
             <h1>Koniec Quizu!</h1>
             <p class="score-text">Twój wynik to:</p>
             <div id="final-score">0 / 0</div>
-            <button id="restart-btn">Rozwiąż ponownie</button>
+            <div class="footer result-footer">
+                <button id="restart-btn">Rozwiąż ponownie</button>
+                <button id="home-btn" class="btn-secondary">Wróć do menu</button>
+            </div>
         </div>
+        
     </div>
-    <script src="script.js?v=1"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

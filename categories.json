@@ -1,0 +1,12 @@
+[
+    {
+        "category": "Test",
+        "description": "Sprawdź swoją wiedzę z zakresu podstaw programowania webowego i technologii internetowych.",
+        "contentFile": "pytania_test.json"
+    },
+    {
+        "category": "Fizjoterapia - Specjalizacja",
+        "description": "Pytania na egzamin specjalizacyjny z fizjoterapii.",
+        "contentFile": "pytania_fizjoterapia.json"
+    }
+]
