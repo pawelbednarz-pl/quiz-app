@@ -61,12 +61,12 @@ button:disabled { background-color: #ccc !important; cursor: not-allowed; filter
 #final-score { font-size: 3rem; font-weight: bold; color: var(--primary-color); margin: 20px 0; text-align: center; }
 .score-text { text-align: center; font-size: 1.2rem; }
 
-@media (max-width: 480px) {
-    body { align-items: stretch; padding: 0; min-height: 100dvh; }
-    .container { width: 100%; max-width: none; }
-    .card { border-radius: 0; min-height: 100dvh; box-sizing: border-box; }
+@media (max-width: 768px) {
+    body { align-items: stretch; padding: 0; margin: 0; min-height: 100dvh; }
+    .container { width: 100%; max-width: none; min-height: 100dvh; }
+    .card { border-radius: 0; box-shadow: none; min-height: 100dvh; box-sizing: border-box; display: flex; flex-direction: column; }
     #quiz-card { min-height: 100dvh; }
-    .options-grid { max-height: none; }
-    .footer { flex-direction: column; }
+    .options-grid { max-height: none; overflow-y: visible; }
+    .footer { flex-direction: column; margin-top: auto; }
     button { width: 100%; }
 }
