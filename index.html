@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja Quizowa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="quiz-card" class="card">
+            <div class="header">
+                <h1>Quiz Wiedzy</h1>
+                <div id="progress">Pytanie 1 z ...</div>
+            </div>
+            
+            <div id="question-container">
+                <h2 id="question-text">Ładowanie pytania...</h2>
+                <div id="options-list" class="options-grid">
+                    <!-- Odpowiedzi zostaną wstawione przez JS -->
+                </div>
+            </div>
+
+            <div class="footer">
+                <button id="next-btn" disabled>Następne pytanie</button>
+            </div>
+        </div>
+
+        <div id="result-card" class="card hidden">
+            <h1>Koniec Quizu!</h1>
+            <p class="score-text">Twój wynik to:</p>
+            <div id="final-score">0 / 0</div>
+            <button id="restart-btn">Spróbuj ponownie</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Który tag HTML służy do wstawienia skryptu JavaScript?",
+        "options": ["<js>", "<scripting>", "<script>", "<javascript>"],
+        "correct": 2
+    },
+    {
+        "question": "W jaki sposób odwołujemy się do ID w CSS?",
+        "options": [".klasa", "#identyfikator", "*wszystko", "@regula"],
+        "correct": 1
+    },
+    {
+        "question": "Która funkcja w JS służy do wyświetlania komunikatów w konsoli?",
+        "options": ["window.alert()", "console.print()", "console.log()", "document.write()"],
+        "correct": 2
+    },
+    {
+        "question": "Jaki jest poprawny format pliku z danymi, o który pytałeś?",
+        "options": ["XML", "JSON", "TXT", "CSV"],
+        "correct": 1
+    }
+]
