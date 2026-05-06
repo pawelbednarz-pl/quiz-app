@@ -1,22 +1,602 @@
 [
-    {
-        "question": "Który tag HTML służy do wstawienia skryptu JavaScript?",
-        "options": ["<js>", "<scripting>", "<script>", "<javascript>"],
-        "correct": 2
-    },
-    {
-        "question": "W jaki sposób odwołujemy się do ID w CSS?",
-        "options": [".klasa", "#identyfikator", "*wszystko", "@regula"],
-        "correct": 1
-    },
-    {
-        "question": "Która funkcja w JS służy do wyświetlania komunikatów w konsoli?",
-        "options": ["window.alert()", "console.print()", "console.log()", "document.write()"],
-        "correct": 2
-    },
-    {
-        "question": "Jaki jest poprawny format pliku z danymi, o który pytałeś?",
-        "options": ["XML", "JSON", "TXT", "CSV"],
-        "correct": 1
-    }
+  {
+    "id": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+    "question": "Gorset typu Jewetta (ortezę wyprostną tułowia) stosuje się najczęściej w celu:",
+    "options": [
+      { "content": "Korekcji skolioz idiopatycznych u dzieci", "isCorrect": false },
+      { "content": "Stabilizacji po złamaniach kompresyjnych trzonów kręgów w odcinku Th-L", "isCorrect": true },
+      { "content": "Leczenia kręczu szyi", "isCorrect": false },
+      { "content": "Odciążenia stawów krzyżowo-biodrowych", "isCorrect": false },
+      { "content": "Stabilizacji miednicy po porodzie", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+    "question": "Orteza typu AFO (Ankle-Foot Orthosis) ma za zadanie przede wszystkim:",
+    "options": [
+      { "content": "Unieruchomienie stawu kolanowego", "isCorrect": false },
+      { "content": "Kontrolę ustawienia stopy i stawu skokowego (np. przy stopie opadającej)", "isCorrect": true },
+      { "content": "Odciążenie stawu biodrowego", "isCorrect": false },
+      { "content": "Korekcję koślawości kolan", "isCorrect": false },
+      { "content": "Stabilizację kręgosłupa szyjnego", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+    "question": "Zgodnie z Ustawą o zawodzie fizjoterapeuty, Dokument Prawo Wykonywania Zawodu Fizjoterapeuty (PWZFz) wydaje:",
+    "options": [
+      { "content": "Minister Zdrowia", "isCorrect": false },
+      { "content": "Narodowy Fundusz Zdrowia", "isCorrect": false },
+      { "content": "Krajowa Rada Fizjoterapeutów", "isCorrect": true },
+      { "content": "Rektor uczelni medycznej", "isCorrect": false },
+      { "content": "Wojewódzki konsultant ds. fizjoterapii", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+    "question": "Jak długo, co do zasady, należy przechowywać dokumentację medyczną pacjenta (licząc od końca roku kalendarzowego, w którym dokonano ostatniego wpisu)?",
+    "options": [
+      { "content": "5 lat", "isCorrect": false },
+      { "content": "10 lat", "isCorrect": false },
+      { "content": "20 lat", "isCorrect": true },
+      { "content": "50 lat", "isCorrect": false },
+      { "content": "Bezterminowo", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+    "question": "Najbardziej rekomendowaną formą aktywności dla kobiet w niepowikłanej ciąży, mającą na celu profilaktykę bólów kręgosłupa, są:",
+    "options": [
+      { "content": "Intensywne ćwiczenia mięśni brzucha (brzuszki)", "isCorrect": false },
+      { "content": "Ćwiczenia w odciążeniu (np. pływanie, aqua-aerobik)", "isCorrect": true },
+      { "content": "Biegi długodystansowe", "isCorrect": false },
+      { "content": "Podnoszenie ciężarów", "isCorrect": false },
+      { "content": "Skoki na trampolinie", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
+    "question": "W fizjoterapii kobiet z wysiłkowym nietrzymaniem moczu (WNM) kluczowym elementem jest trening:",
+    "options": [
+      { "content": "Mięśni czworogłowych uda", "isCorrect": false },
+      { "content": "Mięśni dna miednicy (mięśni Kegla)", "isCorrect": true },
+      { "content": "Mięśnia prostownika grzbietu", "isCorrect": false },
+      { "content": "Mięśni naramiennych", "isCorrect": false },
+      { "content": "Mięśni kulszowo-goleniowych", "isCorrect": false }
+    ],
+    "image": "female_pelvic_floor_muscles.jpg"
+  },
+  {
+    "id": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+    "question": "Test szuflady tylnej służy do oceny wydolności:",
+    "options": [
+      { "content": "Więzadła krzyżowego przedniego (ACL)", "isCorrect": false },
+      { "content": "Więzadła krzyżowego tylnego (PCL)", "isCorrect": true },
+      { "content": "Więzadła pobocznego piszczelowego (MCL)", "isCorrect": false },
+      { "content": "Łąkotki przyśrodkowej", "isCorrect": false },
+      { "content": "Ścięgna Achillesa", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
+    "question": "Czym jest \"łokieć tenisisty\"?",
+    "options": [
+      { "content": "Entezopatią nadkłykcia przyśrodkowego kości ramiennej", "isCorrect": false },
+      { "content": "Entezopatią nadkłykcia bocznego kości ramiennej", "isCorrect": true },
+      { "content": "Zespołem cieśni nadgarstka", "isCorrect": false },
+      { "content": "Zapaleniem kaletki łokciowej", "isCorrect": false },
+      { "content": "Uszkodzeniem nerwu łokciowego w kanale Guyona", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
+    "question": "Skala Barthel służy do oceny:",
+    "options": [
+      { "content": "Natężenia bólu nowotworowego", "isCorrect": false },
+      { "content": "Wydolności układu krążenia", "isCorrect": false },
+      { "content": "Samodzielności (sprawności funkcjonalnej) pacjenta w czynnościach dnia codziennego", "isCorrect": true },
+      { "content": "Stopnia uszkodzenia móżdżku", "isCorrect": false },
+      { "content": "Ryzyka wystąpienia zakrzepicy", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+    "question": "W fazie ostrej po skręceniu stawu skokowego (I doba), celem uniesienia kończyny powyżej poziomu serca (Elevation) jest:",
+    "options": [
+      { "content": "Zwiększenie napływu krwi tętniczej", "isCorrect": false },
+      { "content": "Ułatwienie odpływu żylnego i limfatycznego (redukcja obrzęku)", "isCorrect": true },
+      { "content": "Rozciągnięcie więzadeł", "isCorrect": false },
+      { "content": "Zwiększenie zakresu ruchu w stawie", "isCorrect": false },
+      { "content": "Wywołanie przekrwienia czynnego", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+    "question": "Jaki jest główny mechanizm działania prądów TENS?",
+    "options": [
+      { "content": "Wywoływanie silnego skurczu mięśnia", "isCorrect": false },
+      { "content": "Hamowanie przewodnictwa bólowego zgodnie z teorią bramki kontrolnej", "isCorrect": true },
+      { "content": "Wprowadzanie leków w głąb tkanek", "isCorrect": false },
+      { "content": "Rozbijanie zwapnień w tkankach miękkich", "isCorrect": false },
+      { "content": "Zwiększanie gęstości kości", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "2f3a4b5c-6d7e-8f9a-0b1c-2d3e4f5a6b7c",
+    "question": "Metoda Cyriaxa opiera się na:",
+    "options": [
+      { "content": "Diagnostyce różnicowej tkanek miękkich poprzez badanie napięć i oporów", "isCorrect": true },
+      { "content": "Ćwiczeniach oddechowych w astmie", "isCorrect": false },
+      { "content": "Stymulacji punktów akupunkturowych", "isCorrect": false },
+      { "content": "Wykorzystaniu odruchów niemowlęcych", "isCorrect": false },
+      { "content": "Pracy wyłącznie na powięziach powierzchownych", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8d",
+    "question": "Przykurcz Volkmanna jest wynikiem:",
+    "options": [
+      { "content": "Długotrwałego unieruchomienia w gipsie bez żadnej przyczyny", "isCorrect": false },
+      { "content": "Niedokrwienia tkanek przedramienia (często po złamaniach w okolicy łokcia)", "isCorrect": true },
+      { "content": "Uszkodzenia splotu ramiennego przy porodzie", "isCorrect": false },
+      { "content": "Przewlekłego stresu psychicznego", "isCorrect": false },
+      { "content": "Infekcji bakteryjnej skóry", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "4b5c6d7e-8f9a-0b1c-2d3e-4f5a6b7c8d9e",
+    "question": "Podstawowym badaniem obrazowym w diagnostyce skoliozy jest:",
+    "options": [
+      { "content": "Rezonans magnetyczny (MRI) całego ciała", "isCorrect": false },
+      { "content": "Zdjęcie RTG całego kręgosłupa w pozycji stojącej (AP i bok)", "isCorrect": true },
+      { "content": "Tomografia komputerowa (TK) głowy", "isCorrect": false },
+      { "content": "USG jamy brzusznej", "isCorrect": false },
+      { "content": "Scyntygrafia kości", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "5c6d7e8f-9a0b-1c2d-3e4f-5a6b7c8d9e0f",
+    "question": "W kardiologii, I faza rehabilitacji (szpitalna) zazwyczaj kończy się:",
+    "options": [
+      { "content": "Powrotem pacjenta do pracy zawodowej", "isCorrect": false },
+      { "content": "Wykonaniem próby wysiłkowej i ustaleniem tolerancji wysiłku", "isCorrect": true },
+      { "content": "Uzyskaniem pełnej siły mięśniowej", "isCorrect": false },
+      { "content": "Możliwością przebiegnięcia 5 km", "isCorrect": false },
+      { "content": "Wypisaniem recepty na sprzęt ortopedyczny", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "6d7e8f9a-0b1c-2d3e-4f5a-6b7c8d9e0f1a",
+    "question": "Które testy służą do oceny stabilności stawu kolanowego w płaszczyźnie czołowej (więzadła poboczne)?",
+    "options": [
+      { "content": "Test szuflady przedniej", "isCorrect": false },
+      { "content": "Test stresowy koślawienia (Valgus stress test)", "isCorrect": true },
+      { "content": "Test stresowy szpotawienia (Varus stress test)", "isCorrect": true },
+      { "content": "Test Appley'a", "isCorrect": false },
+      { "content": "Test Lasegue'a", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "7e8f9a0b-1c2d-3e4f-5a6b-7c8d9e0f1a2b",
+    "question": "Wybierz cechy charakterystyczne dla reumatoidalnego zapalenia stawów (RZS):",
+    "options": [
+      { "content": "Zmiany zazwyczaj są asymetryczne", "isCorrect": false },
+      { "content": "Często występuje sztywność poranna trwająca powyżej 1 godziny", "isCorrect": true },
+      { "content": "Zmiany dotyczą głównie dużych stawów nośnych (biodra)", "isCorrect": false },
+      { "content": "Występuje symetryczne zajęcie małych stawów rąk i stóp", "isCorrect": true },
+      { "content": "Brak zmian w wynikach badań krwi (OB, CRP)", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "8f9a0b1c-2d3e-4f5a-6b7c-8d9e0f1a2b3c",
+    "question": "Fizjoprofilaktyka drugorzędowa (wtórna) ma na celu:",
+    "options": [
+      { "content": "Zapobieganie wystąpieniu choroby u osób zdrowych poprzez sport", "isCorrect": false },
+      { "content": "Wczesne wykrycie dysfunkcji i zahamowanie ich postępu", "isCorrect": true },
+      { "content": "Ograniczenie skutków już istniejącej niepełnosprawności", "isCorrect": false },
+      { "content": "Zapobieganie nawrotom choroby po skutecznym leczeniu", "isCorrect": true },
+      { "content": "Zmianę systemu finansowania ochrony zdrowia", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1a2b3c4d",
+    "question": "W badaniu pacjenta z podejrzeniem rwy kulszowej, fizjoterapeuta wykonuje:",
+    "options": [
+      { "content": "Test Lasegue'a", "isCorrect": true },
+      { "content": "Test Bragarda (wzmocnienie testu Lasegue'a)", "isCorrect": true },
+      { "content": "Test Allena", "isCorrect": false },
+      { "content": "Test Tinela", "isCorrect": false },
+      { "content": "Test Hawkinsa", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "0b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e",
+    "question": "Do objawów uszkodzenia móżdżku należą:",
+    "options": [
+      { "content": "Spastyczność", "isCorrect": false },
+      { "content": "Ataksja (niezborność ruchowa)", "isCorrect": true },
+      { "content": "Drżenie zamiarowe", "isCorrect": true },
+      { "content": "Afazja czuciowa", "isCorrect": false },
+      { "content": "Porażenie wiotkie mięśni twarzy", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f",
+    "question": "Jakie są podstawowe przeciwwskazania do wykonania drenażu limfatycznego?",
+    "options": [
+      { "content": "Obrzęk pooperacyjny", "isCorrect": false },
+      { "content": "Ostra niewydolność serca (niewyrównana)", "isCorrect": true },
+      { "content": "Aktywna choroba nowotworowa (nieleczona, z ryzykiem przerzutów)", "isCorrect": true },
+      { "content": "Przewlekła niewydolność żylna", "isCorrect": false },
+      { "content": "Zmęczenie mięśniowe", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "2d3e4f5a-6b7c-8d9e-0f1a-2b3c4d5e6f7a",
+    "question": "Wybierz parametry określające chód w ujęciu czasowo-przestrzennym:",
+    "options": [
+      { "content": "Kadencja (liczba kroków na minutę)", "isCorrect": true },
+      { "content": "Długość kroku", "isCorrect": true },
+      { "content": "Ciśnienie tętnicze podczas marszu", "isCorrect": false },
+      { "content": "Skład chemiczny potu", "isCorrect": false },
+      { "content": "Poziom lęku przed upadkiem", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "3e4f5a6b-7c8d-9e0f-1a2b-3c4d5e6f7a8b",
+    "question": "Do praw pacjenta, których fizjoterapeuta musi przestrzegać, należą:",
+    "options": [
+      { "content": "Prawo do bezpłatnej kawy w gabinecie", "isCorrect": false },
+      { "content": "Prawo do informacji o swoim stanie zdrowia i planowanej terapii", "isCorrect": true },
+      { "content": "Prawo do zachowania tajemnicy informacji (prywatność)", "isCorrect": true },
+      { "content": "Prawo do żądania leczenia niezgodnego z wiedzą medyczną", "isCorrect": false },
+      { "content": "Prawo do darmowych wyrobów medycznych bez zlecenia", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "4f5a6b7c-8d9e-0f1a-2b3c-4d5e6f7a8b9c",
+    "question": "Które struktury anatomiczne są najczęściej uszkadzane w tzw. \"triadzie obronnej\" (nieszczęśliwej) stawu kolanowego?",
+    "options": [
+      { "content": "Więzadło krzyżowe tylne (PCL)", "isCorrect": false },
+      { "content": "Więzadło krzyżowe przednie (ACL)", "isCorrect": true },
+      { "content": "Łąkotka przyśrodkowa", "isCorrect": true },
+      { "content": "Mięsień czworogłowy uda", "isCorrect": false },
+      { "content": "Więzadło poboczne strzałkowe (LCL)", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "5a6b7c8d-9e0f-1a2b-3c4d-5e6f7a8b9c0d",
+    "question": "Do czynników ryzyka rozwoju bólów kręgosłupa w miejscu pracy zaliczamy:",
+    "options": [
+      { "content": "Długotrwałe przebywanie w wymuszonej pozycji (np. siedzącej)", "isCorrect": true },
+      { "content": "Podnoszenie ciężarów na prostych nogach", "isCorrect": true },
+      { "content": "Niedostosowanie ergonomiczne stanowiska pracy", "isCorrect": true },
+      { "content": "Częste spacery w czasie przerw", "isCorrect": false },
+      { "content": "Picie dużej ilości wody niegazowanej", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "6b7c8d9e-0f1a-2b3c-4d5e-6f7a8b9c0d1e",
+    "question": "Fizjoterapia u pacjenta po udarze mózgu w fazie wczesnej (oddział udarowy) obejmuje:",
+    "options": [
+      { "content": "Profilaktykę przeciwodleżynową (częste zmiany pozycji)", "isCorrect": true },
+      { "content": "Profilaktykę przeciwzakrzepową (ćwiczenia czynne wolne kończyn zdrowych i bierne porażonych)", "isCorrect": true },
+      { "content": "Naukę bezpiecznej przesiadki z łóżka na wózek", "isCorrect": true },
+      { "content": "Trening siłowy z maksymalnymi obciążeniami (1RM)", "isCorrect": false },
+      { "content": "Intensywne bieganie na bieżni mechanicznej", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "7c8d9e0f-1a2b-3c4d-5e6f-7a8b9c0d1e2f",
+    "question": "Jakie są główne cele stosowania krioterapii miejscowej?",
+    "options": [
+      { "content": "Działanie przeciwbólowe", "isCorrect": true },
+      { "content": "Hamowanie powstawania obrzęku w fazie ostrej", "isCorrect": true },
+      { "content": "Zmniejszenie napięcia mięśniowego (odruchowe)", "isCorrect": true },
+      { "content": "Zwiększenie elastyczności ścięgien przed rozciąganiem", "isCorrect": false },
+      { "content": "Wywołanie silnego stanu zapalnego", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "8d9e0f1a-2b3c-4d5e-6f7a-8b9c0d1e2f3a",
+    "question": "W skład zespołu rehabilitacyjnego (interdyscyplinarnego) zazwyczaj wchodzą:",
+    "options": [
+      { "content": "Lekarz (np. rehabilitacji medycznej, ortopeda)", "isCorrect": true },
+      { "content": "Fizjoterapeuta", "isCorrect": true },
+      { "content": "Psycholog lub terapeuta zajęciowy", "isCorrect": true },
+      { "content": "Inspektor nadzoru budowlanego", "isCorrect": false },
+      { "content": "Specjalista ds. marketingu medycznego", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "9e0f1a2b-3c4d-5e6f-7a8b-9c0d1e2f3a4b",
+    "question": "Wady postawy w płaszczyźnie strzałkowej to:",
+    "options": [
+      { "content": "Plecy okrągłe (hiperkifoza piersiowa)", "isCorrect": true },
+      { "content": "Plecy wklęsłe (hiperlordoza lędźwiowa)", "isCorrect": true },
+      { "content": "Plecy płaskie", "isCorrect": true },
+      { "content": "Skolioza strukturalna", "isCorrect": false },
+      { "content": "Stopa końsko-szpotawa", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "0f1a2b3c-4d5e-6f7a-8b9c-0d1e2f3a4b5c",
+    "question": "Etyka zawodowa fizjoterapeuty nakazuje:",
+    "options": [
+      { "content": "Szacunek dla godności i autonomii pacjenta", "isCorrect": true },
+      { "content": "Zachowanie tajemnicy zawodowej", "isCorrect": true },
+      { "content": "Stałe podnoszenie swoich kwalifikacji zawodowych", "isCorrect": true },
+      { "content": "Krytykowanie innych metod terapeutycznych w obecności pacjenta w celu autopromocji", "isCorrect": false },
+      { "content": "Uzależnianie jakości opieki od statusu materialnego pacjenta", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6e",
+    "question": "Ekwiwalent metaboliczny (MET) to jednostka spoczynkowego poboru tlenu, która wynosi w przybliżeniu:",
+    "options": [
+      { "content": "1,5 ml O2 / kg masy ciała / min", "isCorrect": false },
+      { "content": "3,5 ml O2 / kg masy ciała / min", "isCorrect": true },
+      { "content": "5,5 ml O2 / kg masy ciała / min", "isCorrect": false },
+      { "content": "10,0 ml O2 / kg masy ciała / min", "isCorrect": false },
+      { "content": "22,4 ml O2 / kg masy ciała / min", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7f",
+    "question": "Który parametr spirometryczny najlepiej różnicuje obturacyjne zaburzenia wentylacji od restrykcyjnych?",
+    "options": [
+      { "content": "Pojemność życiowa (VC)", "isCorrect": false },
+      { "content": "Całkowita pojemność płuc (TLC)", "isCorrect": false },
+      { "content": "Wskaźnik Tiffeneau (FEV1/VC)", "isCorrect": true },
+      { "content": "Częstość oddechów (RR)", "isCorrect": false },
+      { "content": "Objętość oddechowa (TV)", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8g",
+    "question": "Złoty standard w ocenie globalnych wzorców ruchowych u noworodków i niemowląt (GMsA) opracował:",
+    "options": [
+      { "content": "Vaclav Vojta", "isCorrect": false },
+      { "content": "Berta Bobath", "isCorrect": false },
+      { "content": "Heinz Prechtl", "isCorrect": true },
+      { "content": "James Cyriax", "isCorrect": false },
+      { "content": "Robin McKenzie", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9b",
+    "question": "Objaw \"zachodzącego słońca\" u noworodka może sugerować:",
+    "options": [
+      { "content": "Dysplazję stawów biodrowych", "isCorrect": false },
+      { "content": "Wzmożone ciśnienie śródczaszkowe (np. wodogłowie)", "isCorrect": true },
+      { "content": "Porażenie splotu ramiennego typu Erb-Duchenne", "isCorrect": false },
+      { "content": "Wrodzoną stopę końsko-szpotawą", "isCorrect": false },
+      { "content": "Prawidłowy rozwój narządu wzroku", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0c",
+    "question": "W cyklu chodu faza \"double support\" (obustronnego podparcia) występuje:",
+    "options": [
+      { "content": "Tylko raz w trakcie całego cyklu", "isCorrect": false },
+      { "content": "Dwukrotnie w trakcie jednego pełnego cyklu chodu", "isCorrect": true },
+      { "content": "Nigdy, jeśli chód jest fizjologiczny", "isCorrect": false },
+      { "content": "Tylko podczas fazy przenoszenia", "isCorrect": false },
+      { "content": "Wyłącznie podczas biegu", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1d",
+    "question": "Przeciwwskazaniem do stosowania oklepywania klatki piersiowej w fizjoterapii oddechowej jest:",
+    "options": [
+      { "content": "Zaleganie wydzieliny w oskrzelach", "isCorrect": false },
+      { "content": "Stabilna astma oskrzelowa", "isCorrect": false },
+      { "content": "Podejrzenie zatorowości płucnej", "isCorrect": true },
+      { "content": "Przewlekłe zapalenie oskrzeli", "isCorrect": false },
+      { "content": "Rozstrzenie oskrzeli", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2e",
+    "question": "Skala ASIA stopień A oznacza:",
+    "options": [
+      { "content": "Niepełne uszkodzenie; zachowana funkcja czuciowa poniżej poziomu uszkodzenia", "isCorrect": false },
+      { "content": "Pełne uszkodzenie; brak funkcji motorycznej i czuciowej w segmentach krzyżowych S4–S5", "isCorrect": true },
+      { "content": "Niepełne uszkodzenie; siła mięśniowa poniżej stopnia 3", "isCorrect": false },
+      { "content": "Pełną sprawność funkcjonalną", "isCorrect": false },
+      { "content": "Izolowane uszkodzenie korzeni nerwowych", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3f",
+    "question": "Test tętna obwodowego na tętnicy grzbietowej stopy wykonuje się:",
+    "options": [
+      { "content": "Na bocznej krawędzi stopy, poniżej kostki bocznej", "isCorrect": false },
+      { "content": "Na grzbiecie stopy, bocznie od ścięgna prostownika długiego palucha", "isCorrect": true },
+      { "content": "Za kostką przyśrodkową", "isCorrect": false },
+      { "content": "W dole podkolanowym", "isCorrect": false },
+      { "content": "Na wysokości głowy kości strzałkowej", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4g",
+    "question": "Mechanizm \"pompy mięśniowej\" kończyn dolnych wspomaga przede wszystkim:",
+    "options": [
+      { "content": "Napływ krwi tętniczej do stóp", "isCorrect": false },
+      { "content": "Odpływ krwi żylnej w kierunku serca", "isCorrect": true },
+      { "content": "Produkcję mazi stawowej w kolanie", "isCorrect": false },
+      { "content": "Przewodzenie bodźców bólowych", "isCorrect": false },
+      { "content": "Stabilizację czynną stawu skokowego", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5b",
+    "question": "W metodzie PNF diagonalna pierwsza (D1) dla kończyny górnej w fazie końcowej (zgięcie) kończy się pozycją:",
+    "options": [
+      { "content": "Zgięcie, odwiedzenie, rotacja zewnętrzna", "isCorrect": false },
+      { "content": "Zgięcie, przywiedzenie, rotacja zewnętrzna", "isCorrect": true },
+      { "content": "Wyprost, przywiedzenie, rotacja wewnętrzna", "isCorrect": false },
+      { "content": "Wyprost, odwiedzenie, rotacja wewnętrzna", "isCorrect": false },
+      { "content": "Zgięcie, odwiedzenie, rotacja wewnętrzna", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5a6c",
+    "question": "Międzynarodowa Klasyfikacja Funkcjonowania, Niepełnosprawności i Zdrowia (ICF) została opracowana przez:",
+    "options": [
+      { "content": "Krajową Izbę Fizjoterapeutów (KIF)", "isCorrect": false },
+      { "content": "Światową Organizację Zdrowia (WHO)", "isCorrect": true },
+      { "content": "Polskie Towarzystwo Fizjoterapii (PTF)", "isCorrect": false },
+      { "content": "Narodowy Fundusz Zdrowia (NFZ)", "isCorrect": false },
+      { "content": "Międzynarodowy Czerwony Krzyż", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "2f3a4b5c-6d7e-8f9a-0b1c-2d3e4f5a6b7d",
+    "question": "Ile punktów w skali Apgar otrzymuje noworodka, u którego czynność serca wynosi powyżej 100 uderzeń na minutę?",
+    "options": [
+      { "content": "0 punktów", "isCorrect": false },
+      { "content": "1 punkt", "isCorrect": false },
+      { "content": "2 punkty", "isCorrect": true },
+      { "content": "5 punktów", "isCorrect": false },
+      { "content": "10 punktów", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8e",
+    "question": "Typowym objawem radiologicznym w chorobie zwyrodnieniowej stawów (ChZS) NIE JEST:",
+    "options": [
+      { "content": "Zwężenie szczeliny stawowej", "isCorrect": false },
+      { "content": "Obecność osteofitów", "isCorrect": false },
+      { "content": "Sklerotyzacja podchrzęstna", "isCorrect": false },
+      { "content": "Rozrzedzenie struktury kostnej o typie \"wygryzienia przez mole\"", "isCorrect": true },
+      { "content": "Obecność geod (torebek galaretowatych) w kości", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "4b5c6d7e-8f9a-0b1c-2d3e-4f5a6b7c8d9f",
+    "question": "Za prozdrowotną dawkę aktywności fizycznej dla osoby dorosłej (wg WHO) uznaje się minimum:",
+    "options": [
+      { "content": "30 minut intensywnego wysiłku raz w tygodniu", "isCorrect": false },
+      { "content": "150–300 minut umiarkowanej aktywności tlenowej w tygodniu", "isCorrect": true },
+      { "content": "10 000 kroków wykonanych w ciągu jednego miesiąca", "isCorrect": false },
+      { "content": "5 minut ćwiczeń siłowych codziennie", "isCorrect": false },
+      { "content": "Wyłącznie profesjonalny trening sportowy", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "5c6d7e8f-9a0b-1c2d-3e4f-5a6b7c8d9e0g",
+    "question": "W przypadku zdiagnozowania u pacjenta \"czerwonych flag\" (red flags) podczas wywiadu, fizjoterapeuta powinien:",
+    "options": [
+      { "content": "Rozpocząć intensywną terapię manualną", "isCorrect": false },
+      { "content": "Zastosować fizykoterapię przeciwbólową i obserwować pacjenta przez miesiąc", "isCorrect": false },
+      { "content": "Niezwłocznie skierować pacjenta do lekarza specjalisty w celu pogłębionej diagnostyki", "isCorrect": true },
+      { "content": "Zalecić pacjentowi odpoczynek i leki dostępne bez recepty", "isCorrect": false },
+      { "content": "Zignorować objawy, jeśli nie ograniczają one ruchu", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "6d7e8f9a-0b1c-2d3e-4f5a-6b7c8d9e0f1b",
+    "question": "Które parametry są niezbędne do wyliczenia wskaźnika wskaźnik kostka-ramię (ABI)?",
+    "options": [
+      { "content": "Ciśnienie skurczowe na tętnicy ramiennej", "isCorrect": true },
+      { "content": "Ciśnienie rozkurczowe na tętnicy ramiennej", "isCorrect": false },
+      { "content": "Ciśnienie skurczowe na tętnicy grzbietowej stopy lub piszczelowej tylnej", "isCorrect": true },
+      { "content": "Średnie ciśnienie tętnicze (MAP)", "isCorrect": false },
+      { "content": "Częstość tętna na obwodzie", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "7e8f9a0b-1c2d-3e4f-5a6b-7c8d9e0f1a2c",
+    "question": "Wybierz skale stosowane do oceny stanu czynnościowego pacjentów z chorobami płuc:",
+    "options": [
+      { "content": "Skala mMRC (dysnoea scale)", "isCorrect": true },
+      { "content": "Skala Glasgow (GCS)", "isCorrect": false },
+      { "content": "Skala NYHA", "isCorrect": false },
+      { "content": "Test 6-minutowego marszu (6MWT)", "isCorrect": true },
+      { "content": "Skala Lovetta", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "8f9a0b1c-2d3e-4f5a-6b7c-8d9e0f1a2b3d",
+    "question": "Do odruchów prymitywnych (noworodkowych), które powinny wygasnąć w pierwszym półroczu życia, należą:",
+    "options": [
+      { "content": "Odruch Moro", "isCorrect": true },
+      { "content": "Odruch spadochronowy (obronny)", "isCorrect": false },
+      { "content": "Automatyzm chodu", "isCorrect": true },
+      { "content": "Reakcja nastawcza głowy", "isCorrect": false },
+      { "content": "Reakcja równoważna w siadzie", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1a2b3c4e",
+    "question": "W kinezjologii, staw biodrowy jest przykładem stawu:",
+    "options": [
+      { "content": "Zawiasowego", "isCorrect": false },
+      { "content": "Kulistego panewkowego", "isCorrect": true },
+      { "content": "Jednoosiowego", "isCorrect": false },
+      { "content": "Wieloosiowego", "isCorrect": true },
+      { "content": "Siodełkowatego", "isCorrect": false }
+    ],
+    "image": null
+  },
+  {
+    "id": "0b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5f",
+    "question": "Które metody fizjoterapeutyczne są uznawane za metody specyficzne w leczeniu skolioz idiopatycznych (PSSE)?",
+    "options": [
+      { "content": "Metoda McKenziego", "isCorrect": false },
+      { "content": "Metoda FITS", "isCorrect": true },
+      { "content": "Metoda PNF", "isCorrect": false },
+      { "content": "Metoda Lehnert-Schroth", "isCorrect": true },
+      { "content": "Metoda Pilates", "isCorrect": false }
+    ],
+    "image": null
+  }
 ]
