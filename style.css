@@ -62,6 +62,11 @@ button:disabled { background-color: #ccc !important; cursor: not-allowed; filter
 .score-text { text-align: center; font-size: 1.2rem; }
 
 @media (max-width: 480px) {
+    body { align-items: stretch; padding: 0; min-height: 100dvh; }
+    .container { width: 100%; max-width: none; }
+    .card { border-radius: 0; min-height: 100dvh; box-sizing: border-box; }
+    #quiz-card { min-height: 100dvh; }
+    .options-grid { max-height: none; }
     .footer { flex-direction: column; }
     button { width: 100%; }
 }
