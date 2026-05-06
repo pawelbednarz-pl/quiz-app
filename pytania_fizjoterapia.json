@@ -533,7 +533,7 @@
         "isCorrect": true
       },
       {
-        "content": "Listę prywatnych kontaktów pacjenta",
+        "content": "Wyniki badań laboratoryjnych zleconych przez fizjoterapeutę",
         "isCorrect": false
       }
     ],
@@ -1343,7 +1343,7 @@
         "isCorrect": true
       },
       {
-        "content": "Listę prywatnych kontaktów pacjenta",
+        "content": "Wyniki badań laboratoryjnych zleconych przez fizjoterapeutę",
         "isCorrect": false
       }
     ],
@@ -1613,7 +1613,7 @@
         "isCorrect": false
       },
       {
-        "content": "Lista zakupów spożywczych pacjenta",
+        "content": "Protokół z konsylium lekarskiego",
         "isCorrect": false
       }
     ],
@@ -1694,7 +1694,7 @@
         "isCorrect": true
       },
       {
-        "content": "Przeprowadzanie operacji kardiochirurgicznych",
+        "content": "Ordynowanie leków przeciwbólowych z grupy opioidów",
         "isCorrect": false
       }
     ],
@@ -2299,7 +2299,7 @@
     "question": "Do praw pacjenta, których fizjoterapeuta musi przestrzegać, należą:",
     "options": [
       {
-        "content": "Prawo do bezpłatnej kawy w gabinecie",
+        "content": "Prawo do wyboru fizjoterapeuty prowadzącego",
         "isCorrect": false
       },
       {
@@ -2315,7 +2315,7 @@
         "isCorrect": false
       },
       {
-        "content": "Prawo do darmowych wyrobów medycznych bez zlecenia",
+        "content": "Prawo do wglądu w dokumentację finansową placówki",
         "isCorrect": false
       }
     ],
@@ -4120,11 +4120,11 @@
         "isCorrect": true
       },
       {
-        "content": "Wykaz zarobków miesięcznych pacjenta",
+        "content": "Numer polisy ubezpieczeniowej pracodawcy pacjenta",
         "isCorrect": false
       },
       {
-        "content": "Opinię fizjoterapeuty o poglądach politycznych pacjenta",
+        "content": "Ocenę zdolności pacjenta do pracy zawodowej",
         "isCorrect": false
       }
     ],
@@ -6276,7 +6276,7 @@
         "isCorrect": true
       },
       {
-        "content": "Wykonywanie tatuaży terapeutycznych",
+        "content": "Akupunktura wykonywana przez fizjoterapeutę",
         "isCorrect": false
       },
       {
@@ -6284,7 +6284,7 @@
         "isCorrect": false
       },
       {
-        "content": "Przymusowa izolacja w ciemni",
+        "content": "Farmakoterapia opioidowa bez konsultacji lekarskiej",
         "isCorrect": false
       }
     ],
@@ -9007,11 +9007,11 @@
         "isCorrect": true
       },
       {
-        "content": "Nagły wzrost apetytu na słodycze",
+        "content": "Ból w klatce piersiowej nasilający się przy wdechu",
         "isCorrect": false
       },
       {
-        "content": "Swędzenie w okolicach łokci",
+        "content": "Obrzęk kończyn dolnych z towarzyszącą sinicą",
         "isCorrect": false
       }
     ],
@@ -10993,7 +10993,7 @@
     "question": "Jaki jest główny cel fizjoterapii u pacjenta z chorobą Alzheimera?",
     "options": [
       {
-        "content": "Nauczenie go skomplikowanych wzorów matematycznych",
+        "content": "Przywrócenie pełnej sprawności poznawczej sprzed choroby",
         "isCorrect": false
       },
       {
@@ -11009,7 +11009,7 @@
         "isCorrect": false
       },
       {
-        "content": "Intensywny trening kulturystyczny",
+        "content": "Trening wytrzymałościowy o wysokiej intensywności",
         "isCorrect": false
       }
     ],
@@ -11109,15 +11109,15 @@
         "isCorrect": true
       },
       {
-        "content": "Noszenia okularów",
+        "content": "Przyjmowania pacjentów bez skierowania lekarskiego",
         "isCorrect": false
       },
       {
-        "content": "Posiadania własnego samochodu",
+        "content": "Prowadzenia działalności konkurencyjnej wobec pracodawcy w godzinach pracy",
         "isCorrect": false
       },
       {
-        "content": "Czytania książek medycznych innych niż polskie",
+        "content": "Delegowania czynności zawodowych osobom bez uprawnień",
         "isCorrect": false
       }
     ],
@@ -12278,7 +12278,7 @@
         "isCorrect": false
       },
       {
-        "content": "Nagły wzrost zdolności matematycznych",
+        "content": "Stopniowa poprawa pamięci krótkotrwałej",
         "isCorrect": false
       }
     ],
@@ -12949,11 +12949,11 @@
         "isCorrect": true
       },
       {
-        "content": "Nagły wzrost siły rąk",
+        "content": "Poliuria (zwiększone oddawanie moczu)",
         "isCorrect": false
       },
       {
-        "content": "Zmiana koloru włosów na zielony",
+        "content": "Nadmierna potliwość nocna",
         "isCorrect": false
       }
     ],
@@ -13034,7 +13034,7 @@
         "isCorrect": false
       },
       {
-        "content": "Przeprowadzanie operacji wycięcia wyrostka",
+        "content": "Samodzielne modyfikowanie dawek leków pacjenta",
         "isCorrect": false
       }
     ],
@@ -13138,11 +13138,11 @@
         "isCorrect": true
       },
       {
-        "content": "Nagłego przypływu sił fizycznych i chęci do sportu",
+        "content": "Zwiększonej aktywności psychomotorycznej i euforii",
         "isCorrect": false
       },
       {
-        "content": "Całkowitego wyleczenia wszystkich chorób kręgosłupa",
+        "content": "Poprawy funkcji poznawczych i koncentracji",
         "isCorrect": false
       }
     ],
@@ -13223,7 +13223,7 @@
         "isCorrect": false
       },
       {
-        "content": "Skakanie na trampolinie w celu przetestowania szwów",
+        "content": "Intensywny trening interwałowy od pierwszego dnia po operacji",
         "isCorrect": false
       }
     ],
@@ -13435,11 +13435,11 @@
         "isCorrect": true
       },
       {
-        "content": "Ucieczka z kraju przed policją",
+        "content": "Natychmiastowe usunięcie wpisu z dokumentacji medycznej",
         "isCorrect": false
       },
       {
-        "content": "Przekonanie pacjenta, że to jego wina",
+        "content": "Odmowa udzielenia informacji pacjentowi o zdarzeniu",
         "isCorrect": false
       }
     ],
@@ -13574,7 +13574,7 @@
         "isCorrect": false
       },
       {
-        "content": "Wyrywanie stron, które nam się nie podobają",
+        "content": "Dokonywanie wpisów ołówkiem dla łatwiejszej korekty",
         "isCorrect": false
       }
     ],
@@ -13786,11 +13786,11 @@
         "isCorrect": true
       },
       {
-        "content": "Klimatyzację dwustrefową",
+        "content": "System napędu elektrycznego wspomagającego podjazdy",
         "isCorrect": false
       },
       {
-        "content": "Radio z nawigacją satelitarną i telewizją",
+        "content": "Poduszki przeciwodleżynowe z czujnikiem ciśnienia",
         "isCorrect": false
       }
     ],
@@ -13840,7 +13840,7 @@
         "isCorrect": true
       },
       {
-        "content": "Zarabianie jak największej ilości pieniędzy kosztem zdrowia pacjenta",
+        "content": "Promowanie wyłącznie metod fizjoterapii opartych na własnym doświadczeniu",
         "isCorrect": false
       },
       {
