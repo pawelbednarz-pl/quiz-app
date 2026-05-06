@@ -16,16 +16,15 @@
             
             <div id="question-container">
                 <h2 id="question-text">Ładowanie pytania...</h2>
-                <!-- Miejsce na opcjonalny obrazek -->
                 <img id="question-image" src="" alt="Ilustracja do pytania" class="hidden">
-                
-                <div id="options-list" class="options-grid">
-                    <!-- Odpowiedzi zostaną wstawione przez JS -->
-                </div>
+                <p class="instruction">Możesz zaznaczyć więcej niż jedną odpowiedź.</p>
+                <div id="options-list" class="options-grid"></div>
             </div>
 
             <div class="footer">
-                <button id="next-btn" disabled>Następne pytanie</button>
+                <button id="prev-btn" disabled>Poprzednie</button>
+                <button id="submit-btn" class="btn-success">Zatwierdź test</button>
+                <button id="next-btn">Następne</button>
             </div>
         </div>
 
@@ -33,7 +32,7 @@
             <h1>Koniec Quizu!</h1>
             <p class="score-text">Twój wynik to:</p>
             <div id="final-score">0 / 0</div>
-            <button id="restart-btn">Spróbuj ponownie</button>
+            <button id="restart-btn">Rozwiąż ponownie</button>
         </div>
     </div>
     <script src="script.js"></script>
