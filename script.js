@@ -1,42 +1,4 @@
 
-questions_data = [
-    {
-        "id": str(uuid.uuid4()),
-        "question": "Który tag HTML służy do wstawienia skryptu JavaScript?",
-        "options": [
-            {"content": "<js>", "isCorrect": False},
-            {"content": "<scripting>", "isCorrect": False},
-            {"content": "<script>", "isCorrect": True},
-            {"content": "<javascript>", "isCorrect": False}
-        ],
-        "image": ""
-    },
-    {
-        "id": str(uuid.uuid4()),
-        "question": "W jaki sposób odwołujemy się do ID w CSS?",
-        "options": [
-            {"content": ".klasa", "isCorrect": False},
-            {"content": "#identyfikator", "isCorrect": True},
-            {"content": "*wszystko", "isCorrect": False},
-            {"content": "@regula", "isCorrect": False}
-        ],
-        "image": ""
-    },
-    {
-        "id": str(uuid.uuid4()),
-        "question": "Która funkcja w JS służy do wyświetlania komunikatów w konsoli?",
-        "options": [
-            {"content": "window.alert()", "isCorrect": False},
-            {"content": "console.print()", "isCorrect": False},
-            {"content": "console.log()", "isCorrect": True},
-            {"content": "document.write()", "isCorrect": False}
-        ],
-        "image": ""
-    }
-]
-json_content = json.dumps(questions_data, indent=4, ensure_ascii=False)
-
-js_content = """"
 let quizData = [];
 let currentQuestionIndex = 0;
 let score = 0;
