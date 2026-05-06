@@ -144,6 +144,7 @@ function showQuestion() {
     });
 
     confirmBtn.classList.toggle('hidden', !!confirmed);
+    if (!confirmed) confirmBtn.disabled = userAnswers[currentQuestionIndex].length === 0;
     updateNavButtons();
 }
 
@@ -157,6 +158,7 @@ function toggleOption(index, button) {
         answers.push(index);
         button.classList.add('selected');
     }
+    confirmBtn.disabled = answers.length === 0;
 }
 
 function confirmAnswer() {
