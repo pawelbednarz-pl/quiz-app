@@ -1,4 +1,4 @@
-:root {
+css_content = """:root {
     --primary-color: #4a90e2;
     --secondary-color: #f5f7fa;
     --text-color: #333;
@@ -30,7 +30,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .header {
@@ -43,9 +43,17 @@ h1 { font-size: 1.5rem; margin: 0; color: var(--primary-color); }
 #progress { font-size: 0.9rem; color: #777; margin-top: 5px; }
 
 #question-text {
-    margin: 25px 0;
+    margin: 25px 0 15px 0;
     font-size: 1.2rem;
     line-height: 1.4;
+}
+
+#question-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    display: block;
 }
 
 .options-grid {
