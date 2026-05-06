@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platforma Quizowa</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
     <div class="container">
@@ -46,9 +46,13 @@
                 <div id="options-list" class="options-grid"></div>
             </div>
 
+            <div class="confirm-container">
+                <button id="confirm-btn" class="btn-confirm">Zatwierdź odpowiedzi</button>
+            </div>
+
             <div class="footer">
                 <button id="prev-btn" disabled>Poprzednie</button>
-                <button id="submit-btn" class="btn-success">Zatwierdź test</button>
+                <button id="submit-btn" class="btn-success" disabled>Zatwierdź test</button>
                 <button id="next-btn">Następne</button>
             </div>
         </div>

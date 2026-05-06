@@ -1,33 +1,29 @@
-
 let categoriesData = [];
 let quizData = [];
 let currentQuestionIndex = 0;
-let userAnswers = {}; 
+let userAnswers = {};
+let confirmedQuestions = {};
 let currentCategoryName = "";
 let currentQuizFile = "";
 
-// Elementy DOM
 const categoriesCard = document.getElementById('categories-card');
 const categoriesList = document.getElementById('categories-list');
 const questionCountSelect = document.getElementById('question-count');
-
 const quizCard = document.getElementById('quiz-card');
 const quizTitle = document.getElementById('quiz-title');
 const questionText = document.getElementById('question-text');
 const questionImage = document.getElementById('question-image');
 const optionsList = document.getElementById('options-list');
 const progressText = document.getElementById('progress');
-
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const submitBtn = document.getElementById('submit-btn');
-
+const confirmBtn = document.getElementById('confirm-btn');
 const resultCard = document.getElementById('result-card');
 const finalScoreText = document.getElementById('final-score');
 const restartBtn = document.getElementById('restart-btn');
 const homeBtn = document.getElementById('home-btn');
 
-// --- Funkcja pomocnicza: Tasowanie tablicy (Fisher-Yates) ---
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -35,7 +31,6 @@ function shuffleArray(array) {
     }
 }
 
-// --- Inicjalizacja: Pobieranie kategorii ---
 async function loadCategories() {
     try {
         const response = await fetch('categories.json');
@@ -43,7 +38,6 @@ async function loadCategories() {
         renderCategories();
     } catch (error) {
         categoriesList.innerHTML = "<p>Błąd podczas ładowania kategorii.</p>";
-        console.error(error);
     }
 }
 
@@ -52,72 +46,51 @@ function renderCategories() {
     categoriesData.forEach(cat => {
         const catDiv = document.createElement('div');
         catDiv.classList.add('category-item');
-        catDiv.innerHTML = `
-            <h2>${cat.category}</h2>
-            <p>${cat.description}</p>
-        `;
+        catDiv.innerHTML = `<h2>${cat.category}</h2><p>${cat.description}</p>`;
         catDiv.addEventListener('click', () => selectCategory(cat));
         categoriesList.appendChild(catDiv);
     });
 }
 
-// --- Ładowanie konkretnego quizu z losowaniem pytań i odpowiedzi ---
 async function selectCategory(cat) {
     try {
         currentCategoryName = cat.category;
         currentQuizFile = cat.contentFile;
-        
         const response = await fetch(currentQuizFile);
         let allQuestions = await response.json();
-        
-        // 1. Tasujemy wszystkie pytania z pliku
         shuffleArray(allQuestions);
-        
-        // 2. Ograniczamy liczbę pytań zgodnie z wyborem z dropdownu
         const selectedCount = questionCountSelect.value;
         if (selectedCount !== "all") {
-            const limit = parseInt(selectedCount, 10);
-            allQuestions = allQuestions.slice(0, limit);
+            allQuestions = allQuestions.slice(0, parseInt(selectedCount, 10));
         }
-        
-        // 3. Tasujemy odpowiedzi dla każdego wybranego pytania
-        allQuestions.forEach(question => {
-            shuffleArray(question.options);
-        });
-        
+        allQuestions.forEach(q => shuffleArray(q.options));
         quizData = allQuestions;
-        
-        if(quizData.length === 0) {
-            alert("Brak pytań w tej kategorii.");
-            return;
-        }
-
-        // Zmiana widoku
+        if (quizData.length === 0) { alert("Brak pytań."); return; }
         categoriesCard.classList.add('hidden');
         quizCard.classList.remove('hidden');
         quizTitle.innerText = currentCategoryName;
-        
         startQuiz();
     } catch (error) {
-        alert("Nie udało się załadować pytań z pliku: " + cat.contentFile);
-        console.error(error);
+        alert("Nie udało się załadować pytań.");
     }
 }
 
-function startQuiz() { 
-    currentQuestionIndex = 0; 
-    userAnswers = {}; 
-    showQuestion(); 
+function startQuiz() {
+    currentQuestionIndex = 0;
+    userAnswers = {};
+    confirmedQuestions = {};
+    showQuestion();
 }
 
 function showQuestion() {
-    optionsList.innerHTML = ""; 
-    const currentQuestion = quizData[currentQuestionIndex];
+    optionsList.innerHTML = "";
+    const q = quizData[currentQuestionIndex];
+    const confirmed = confirmedQuestions[currentQuestionIndex];
     progressText.innerText = `Pytanie ${currentQuestionIndex + 1} z ${quizData.length}`;
-    questionText.innerText = currentQuestion.question;
+    questionText.innerText = q.question;
 
-    if (currentQuestion.image && currentQuestion.image.trim() !== "") {
-        questionImage.src = currentQuestion.image;
+    if (q.image && q.image.trim() !== "") {
+        questionImage.src = q.image;
         questionImage.classList.remove('hidden');
     } else {
         questionImage.classList.add('hidden');
@@ -127,60 +100,94 @@ function showQuestion() {
         userAnswers[currentQuestionIndex] = [];
     }
 
-    currentQuestion.options.forEach((option, index) => {
+    q.options.forEach((option, index) => {
         const button = document.createElement('button');
         button.innerText = option.content;
         button.classList.add('option-btn');
-        
+
         if (userAnswers[currentQuestionIndex].includes(index)) {
             button.classList.add('selected');
         }
 
-        button.addEventListener('click', () => toggleOption(index, button));
+        if (confirmed) {
+            button.disabled = true;
+            if (option.isCorrect) {
+                button.classList.add('correct');
+            }
+            if (userAnswers[currentQuestionIndex].includes(index) && !option.isCorrect) {
+                button.classList.add('incorrect');
+            }
+        } else {
+            button.addEventListener('click', () => toggleOption(index, button));
+        }
+
         optionsList.appendChild(button);
     });
 
-    prevBtn.disabled = currentQuestionIndex === 0;
-    nextBtn.disabled = currentQuestionIndex === quizData.length - 1;
+    confirmBtn.classList.toggle('hidden', !!confirmed);
+    updateNavButtons();
 }
 
 function toggleOption(index, button) {
-    const answersForCurrent = userAnswers[currentQuestionIndex];
-    const indexOfSelection = answersForCurrent.indexOf(index);
-
-    if (indexOfSelection > -1) {
-        answersForCurrent.splice(indexOfSelection, 1);
+    const answers = userAnswers[currentQuestionIndex];
+    const idx = answers.indexOf(index);
+    if (idx > -1) {
+        answers.splice(idx, 1);
         button.classList.remove('selected');
     } else {
-        answersForCurrent.push(index);
+        answers.push(index);
         button.classList.add('selected');
     }
 }
 
+function confirmAnswer() {
+    confirmedQuestions[currentQuestionIndex] = true;
+    showQuestion();
+}
+
+function findUnconfirmed(direction) {
+    const len = quizData.length;
+    for (let i = 1; i < len; i++) {
+        const idx = (currentQuestionIndex + i * direction + len) % len;
+        if (!confirmedQuestions[idx]) return idx;
+    }
+    return -1;
+}
+
+function updateNavButtons() {
+    const allConfirmed = quizData.every((_, i) => confirmedQuestions[i]);
+    submitBtn.disabled = !allConfirmed;
+
+    const prevUnconfirmed = findUnconfirmed(-1);
+    const nextUnconfirmed = findUnconfirmed(1);
+    prevBtn.disabled = prevUnconfirmed === -1;
+    nextBtn.disabled = nextUnconfirmed === -1;
+}
+
 prevBtn.addEventListener('click', () => {
-    if (currentQuestionIndex > 0) { currentQuestionIndex--; showQuestion(); }
+    const idx = findUnconfirmed(-1);
+    if (idx !== -1) { currentQuestionIndex = idx; showQuestion(); }
 });
 
 nextBtn.addEventListener('click', () => {
-    if (currentQuestionIndex < quizData.length - 1) { currentQuestionIndex++; showQuestion(); }
+    const idx = findUnconfirmed(1);
+    if (idx !== -1) { currentQuestionIndex = idx; showQuestion(); }
 });
 
-// --- Obliczanie wyniku ---
+confirmBtn.addEventListener('click', confirmAnswer);
+
 submitBtn.addEventListener('click', () => {
     let score = 0;
-
     quizData.forEach((question, qIndex) => {
-        const correctIndices = [];
-        question.options.forEach((opt, idx) => { if (opt.isCorrect) correctIndices.push(idx); });
-
-        const selectedIndices = userAnswers[qIndex] || [];
-        const isExactlyCorrect = 
-            correctIndices.length === selectedIndices.length &&
-            correctIndices.every(val => selectedIndices.includes(val));
-
-        if (isExactlyCorrect) score++;
+        const correctIndices = question.options
+            .map((opt, idx) => opt.isCorrect ? idx : -1)
+            .filter(idx => idx !== -1);
+        const selected = userAnswers[qIndex] || [];
+        if (correctIndices.length === selected.length &&
+            correctIndices.every(val => selected.includes(val))) {
+            score++;
+        }
     });
-
     showResult(score);
 });
 
@@ -190,10 +197,8 @@ function showResult(score) {
     finalScoreText.innerText = `${score} / ${quizData.length}`;
 }
 
-// --- Nawigacja końcowa ---
 restartBtn.addEventListener('click', () => {
     resultCard.classList.add('hidden');
-    // Ponownie tasujemy pytania dla tej samej kategorii!
     selectCategory({ category: currentCategoryName, contentFile: currentQuizFile });
 });
 
@@ -202,5 +207,4 @@ homeBtn.addEventListener('click', () => {
     categoriesCard.classList.remove('hidden');
 });
 
-// Start
 loadCategories();
