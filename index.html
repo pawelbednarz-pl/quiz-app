@@ -21,7 +21,7 @@
                     <option value="all">Wszystkie dostępne</option>
                     <option value="2">2</option>
                     <option value="5">5</option>
-                    <option value="10">10</option>
+                    <option value="10" selected>10</option>
                     <option value="20">20</option>
                     <option value="50">50</option>
                 </select>
@@ -48,10 +48,12 @@
 
             <div class="confirm-container">
                 <button id="confirm-btn" class="btn-confirm">Zatwierdź odpowiedzi</button>
+                <label class="skip-toggle"><input type="checkbox" id="skip-confirmed"> Pomijaj zatwierdzone</label>
             </div>
 
             <div class="footer">
                 <button id="prev-btn" disabled>Poprzednie</button>
+                <button id="back-to-results" class="btn-secondary hidden">Podsumowanie</button>
                 <button id="submit-btn" class="btn-success" disabled>Zatwierdź test</button>
                 <button id="next-btn">Następne</button>
             </div>
@@ -63,6 +65,7 @@
             <p class="score-text">Twój wynik to:</p>
             <div id="final-score">0 / 0</div>
             <div class="footer result-footer">
+                <button id="review-btn">Przejrzyj pytania</button>
                 <button id="restart-btn">Rozwiąż ponownie</button>
                 <button id="home-btn" class="btn-secondary">Wróć do menu</button>
             </div>

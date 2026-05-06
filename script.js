@@ -23,6 +23,7 @@ const resultCard = document.getElementById('result-card');
 const finalScoreText = document.getElementById('final-score');
 const restartBtn = document.getElementById('restart-btn');
 const homeBtn = document.getElementById('home-btn');
+const reviewBtn = document.getElementById('review-btn');
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -96,6 +97,24 @@ function showQuestion() {
         questionImage.classList.add('hidden');
     }
 
+    // Show result indicator for confirmed questions
+    let resultIndicator = document.getElementById('result-indicator');
+    if (!resultIndicator) {
+        resultIndicator = document.createElement('p');
+        resultIndicator.id = 'result-indicator';
+        questionText.after(resultIndicator);
+    }
+    if (confirmed) {
+        const correctIndices = q.options.map((opt, idx) => opt.isCorrect ? idx : -1).filter(i => i !== -1);
+        const selected = userAnswers[currentQuestionIndex] || [];
+        const isCorrect = correctIndices.length === selected.length && correctIndices.every(v => selected.includes(v));
+        resultIndicator.textContent = isCorrect ? '✓ Poprawna odpowiedź' : '✗ Błędna odpowiedź';
+        resultIndicator.className = 'result-indicator ' + (isCorrect ? 'indicator-correct' : 'indicator-incorrect');
+    } else {
+        resultIndicator.textContent = '';
+        resultIndicator.className = '';
+    }
+
     if (!userAnswers[currentQuestionIndex]) {
         userAnswers[currentQuestionIndex] = [];
     }
@@ -145,10 +164,17 @@ function confirmAnswer() {
     showQuestion();
 }
 
-function findUnconfirmed(direction) {
+const skipConfirmedCheckbox = document.getElementById('skip-confirmed');
+
+function findNext(direction) {
+    if (!skipConfirmedCheckbox.checked) {
+        const next = currentQuestionIndex + direction;
+        return (next >= 0 && next < quizData.length) ? next : -1;
+    }
     const len = quizData.length;
     for (let i = 1; i < len; i++) {
-        const idx = (currentQuestionIndex + i * direction + len) % len;
+        const idx = currentQuestionIndex + i * direction;
+        if (idx < 0 || idx >= len) break;
         if (!confirmedQuestions[idx]) return idx;
     }
     return -1;
@@ -157,22 +183,21 @@ function findUnconfirmed(direction) {
 function updateNavButtons() {
     const allConfirmed = quizData.every((_, i) => confirmedQuestions[i]);
     submitBtn.disabled = !allConfirmed;
-
-    const prevUnconfirmed = findUnconfirmed(-1);
-    const nextUnconfirmed = findUnconfirmed(1);
-    prevBtn.disabled = prevUnconfirmed === -1;
-    nextBtn.disabled = nextUnconfirmed === -1;
+    prevBtn.disabled = findNext(-1) === -1;
+    nextBtn.disabled = findNext(1) === -1;
 }
 
 prevBtn.addEventListener('click', () => {
-    const idx = findUnconfirmed(-1);
+    const idx = findNext(-1);
     if (idx !== -1) { currentQuestionIndex = idx; showQuestion(); }
 });
 
 nextBtn.addEventListener('click', () => {
-    const idx = findUnconfirmed(1);
+    const idx = findNext(1);
     if (idx !== -1) { currentQuestionIndex = idx; showQuestion(); }
 });
+
+skipConfirmedCheckbox.addEventListener('change', updateNavButtons);
 
 confirmBtn.addEventListener('click', confirmAnswer);
 
@@ -196,6 +221,23 @@ function showResult(score) {
     resultCard.classList.remove('hidden');
     finalScoreText.innerText = `${score} / ${quizData.length}`;
 }
+
+reviewBtn.addEventListener('click', () => {
+    resultCard.classList.add('hidden');
+    quizCard.classList.remove('hidden');
+    submitBtn.classList.add('hidden');
+    confirmBtn.classList.add('hidden');
+    skipConfirmedCheckbox.checked = false;
+    document.querySelector('.skip-toggle').classList.add('hidden');
+    document.getElementById('back-to-results').classList.remove('hidden');
+    currentQuestionIndex = 0;
+    showQuestion();
+});
+
+document.getElementById('back-to-results').addEventListener('click', () => {
+    quizCard.classList.add('hidden');
+    resultCard.classList.remove('hidden');
+});
 
 restartBtn.addEventListener('click', () => {
     resultCard.classList.add('hidden');
